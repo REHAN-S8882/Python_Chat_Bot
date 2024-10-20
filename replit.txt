@@ -1,0 +1,17 @@
+# Specify the Python version you're using
+modules = ["python-3.12"]
+
+# This command runs your Python chatbot project
+run = "python3 app.py"
+
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+# This is for deployment; you might not need this for local testing
+run = ["sh", "-c", "python3 Python_Chat_Bot.py"]
+
+[[ports]]
+localPort = 8080
+externalPort = 80
